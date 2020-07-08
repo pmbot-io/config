@@ -113,8 +113,8 @@
             "properties": {
                 "pattern": {
                     "type": "string",
-                    "description": "A valid [minimatch](https://www.npmjs.com/package/minimatch) pattern.",
-                    "markdownDescription": "A valid [minimatch](https://www.npmjs.com/package/minimatch) pattern."
+                    "description": "A Javascript regular expression.",
+                    "markdownDescription": "A Javascript regular expression."
                 },
                 "bump": {
                     "enum": [
@@ -160,6 +160,10 @@
                 "bumpConfig": {
                     "description": "Bump configuration. Patterns are matched against dependency names formed as \"<groupId>:<artifactId>\" (e.g. \"javax.xml.bind:jaxb-api\").",
                     "markdownDescription": "Bump configuration. Patterns are matched against dependency names formed as \"<groupId>:<artifactId>\" (e.g. \"javax.xml.bind:jaxb-api\")."
+                },
+                "settingsPath": {
+                    "description": "Path to a maven `settings.xml` file which contains credentials for private repositories.",
+                    "markdownDescription": "Path to a maven `settings.xml` file which contains credentials for private repositories."
                 }
             },
             "type": "object"
@@ -611,8 +615,8 @@
                     },
                     "type": "array",
                     "default": [],
-                    "description": "List of dependencies to ignore. Each item is a [minimatch](https://github.com/isaacs/minimatch) pattern.",
-                    "markdownDescription": "List of dependencies to ignore. Each item is a [minimatch](https://github.com/isaacs/minimatch) pattern."
+                    "description": "List of dependencies to ignore. Each item should be a Javascript regular expression.",
+                    "markdownDescription": "List of dependencies to ignore. Each item should be a Javascript regular expression."
                 },
                 "actions": {
                     "items": {
