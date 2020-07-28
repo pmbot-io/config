@@ -203,7 +203,7 @@
             "properties": {
                 "title": {
                     "type": "string",
-                    "default": "Automated update of {{slug}} {{statusEmoji}}",
+                    "default": "Automated update of {{slug}} dependencies {{statusEmoji}}",
                     "description": "Issue title\n\nThis [handlebars](https://handlebarsjs.com/guide/#what-is-handlebars) template is passed the following context:\n\n```\n{\n    \"slug\": \"myPm\",\n    \"status\": \"myStatus\",\n    \"statusEmoji\": \"✅\"\n}\n```\n",
                     "markdownDescription": "Issue title\n\nThis [handlebars](https://handlebarsjs.com/guide/#what-is-handlebars) template is passed the following context:\n\n```\n{\n    \"slug\": \"myPm\",\n    \"status\": \"myStatus\",\n    \"statusEmoji\": \"✅\"\n}\n```\n"
                 },
@@ -226,15 +226,24 @@
                     "default": true,
                     "description": "Close open issues that were created by Pmbot. This option prevents multiple issues open simultaneously when you don't have the time to look at them.",
                     "markdownDescription": "Close open issues that were created by Pmbot. This option prevents multiple issues open simultaneously when you don't have the time to look at them."
+                },
+                "token": {
+                    "minLength": 1,
+                    "type": "string",
+                    "description": "An authentication token. For Gitlab, this should be a [personal access token](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html). For Github, it should be a [Github personal access token](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line).",
+                    "markdownDescription": "An authentication token. For Gitlab, this should be a [personal access token](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html). For Github, it should be a [Github personal access token](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line)."
                 }
             },
-            "type": "object"
+            "type": "object",
+            "required": [
+                "token"
+            ]
         },
         "CreateMergeRequestActionConfig": {
             "properties": {
                 "title": {
                     "type": "string",
-                    "default": "Automated update of {{slug}} {{statusEmoji}}",
+                    "default": "Automated update of {{slug}} dependencies {{statusEmoji}}",
                     "description": "Merge request title\n\nThis [handlebars](https://handlebarsjs.com/guide/#what-is-handlebars) template is passed the following context:\n\n```\n{\n    \"slug\": \"myPm\",\n    \"status\": \"myStatus\",\n    \"statusEmoji\": \"✅\"\n}\n```\n",
                     "markdownDescription": "Merge request title\n\nThis [handlebars](https://handlebarsjs.com/guide/#what-is-handlebars) template is passed the following context:\n\n```\n{\n    \"slug\": \"myPm\",\n    \"status\": \"myStatus\",\n    \"statusEmoji\": \"✅\"\n}\n```\n"
                 },
@@ -275,9 +284,18 @@
                     "default": true,
                     "description": "[GITHUB only] Whether maintainers can modify the created pull request",
                     "markdownDescription": "[GITHUB only] Whether maintainers can modify the created pull request"
+                },
+                "token": {
+                    "minLength": 1,
+                    "type": "string",
+                    "description": "An authentication token. For Gitlab, this should be a [personal access token](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html). For Github, it should be a [Github personal access token](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line).",
+                    "markdownDescription": "An authentication token. For Gitlab, this should be a [personal access token](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html). For Github, it should be a [Github personal access token](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line)."
                 }
             },
-            "type": "object"
+            "type": "object",
+            "required": [
+                "token"
+            ]
         },
         "AutoMergeActionCommitMessageTemplateContext": {
             "properties": {
@@ -371,7 +389,7 @@
                 },
                 "title": {
                     "type": "string",
-                    "default": "Automated update of {{slug}} {{statusEmoji}}",
+                    "default": "Automated update of {{slug}} dependencies {{statusEmoji}}",
                     "description": "Slack message title\n\nThis [handlebars](https://handlebarsjs.com/guide/#what-is-handlebars) template is passed the following context:\n\n```\n{\n    \"slug\": \"myPm\",\n    \"status\": \"myStatus\",\n    \"statusEmoji\": \"✅\"\n}\n```\n",
                     "markdownDescription": "Slack message title\n\nThis [handlebars](https://handlebarsjs.com/guide/#what-is-handlebars) template is passed the following context:\n\n```\n{\n    \"slug\": \"myPm\",\n    \"status\": \"myStatus\",\n    \"statusEmoji\": \"✅\"\n}\n```\n"
                 },
@@ -404,7 +422,7 @@
                 },
                 "title": {
                     "type": "string",
-                    "default": "Automated update of {{slug}} {{statusEmoji}}",
+                    "default": "Automated update of {{slug}} dependencies {{statusEmoji}}",
                     "description": "Message title\n\nThis [handlebars](https://handlebarsjs.com/guide/#what-is-handlebars) template is passed the following context:\n\n```\n{\n    \"slug\": \"myPm\",\n    \"status\": \"myStatus\",\n    \"statusEmoji\": \"✅\"\n}\n```\n",
                     "markdownDescription": "Message title\n\nThis [handlebars](https://handlebarsjs.com/guide/#what-is-handlebars) template is passed the following context:\n\n```\n{\n    \"slug\": \"myPm\",\n    \"status\": \"myStatus\",\n    \"statusEmoji\": \"✅\"\n}\n```\n"
                 },
@@ -435,7 +453,7 @@
                 },
                 "subject": {
                     "type": "string",
-                    "default": "Automated update of {{slug}} {{statusEmoji}}",
+                    "default": "Automated update of {{slug}} dependencies {{statusEmoji}}",
                     "description": "Email subject\n\nThis [handlebars](https://handlebarsjs.com/guide/#what-is-handlebars) template is passed the following context:\n\n```\n{\n    \"slug\": \"myPm\",\n    \"status\": \"myStatus\",\n    \"statusEmoji\": \"✅\"\n}\n```\n",
                     "markdownDescription": "Email subject\n\nThis [handlebars](https://handlebarsjs.com/guide/#what-is-handlebars) template is passed the following context:\n\n```\n{\n    \"slug\": \"myPm\",\n    \"status\": \"myStatus\",\n    \"statusEmoji\": \"✅\"\n}\n```\n"
                 }
