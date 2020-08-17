@@ -613,6 +613,15 @@
                                 },
                                 "config": "object"
                             }
+                        },
+                        {
+                            "type": "object",
+                            "properties": {
+                                "name": {
+                                    "const": "ruby"
+                                },
+                                "config": "object"
+                            }
                         }
                     ],
                     "description": "Package manager to use for this update",
