@@ -112,8 +112,8 @@
         "AutoMergeActionCommitMessageTemplateContext": {
             "properties": {
                 "slug": {
-                    "description": "Update slug. For example, \"npm\", or, \"npm-0\" when there are multiple packageManagerUpdates with packageManager npm.",
-                    "markdownDescription": "Update slug. For example, \"npm\", or, \"npm-0\" when there are multiple packageManagerUpdates with packageManager npm."
+                    "description": "Update slug. For example, \"npm\", or, \"npm-0\" when there are multiple pmUpdates with packageManager npm.",
+                    "markdownDescription": "Update slug. For example, \"npm\", or, \"npm-0\" when there are multiple pmUpdates with packageManager npm."
                 }
             },
             "type": "object",
@@ -147,8 +147,8 @@
         "TitleTemplateContext": {
             "properties": {
                 "slug": {
-                    "description": "Update slug. For example, \"npm\", or, \"npm-0\" when there are multiple packageManagerUpdates with packageManager npm.",
-                    "markdownDescription": "Update slug. For example, \"npm\", or, \"npm-0\" when there are multiple packageManagerUpdates with packageManager npm."
+                    "description": "Update slug. For example, \"npm\", or, \"npm-0\" when there are multiple pmUpdates with packageManager npm.",
+                    "markdownDescription": "Update slug. For example, \"npm\", or, \"npm-0\" when there are multiple pmUpdates with packageManager npm."
                 },
                 "status": {
                     "description": "Package manager update status",
